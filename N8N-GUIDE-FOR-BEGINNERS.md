@@ -26,13 +26,26 @@ Every night (or whenever you want), n8n can look at all your sales and calculate
 
 Don't worry about code! We're just going to "connect the dots."
 
-### STEP 1: Your Supabase Connection Details
-You will need these 5 things to connect n8n to your database:
-- **Host**: `db.ocqtqkmzasjpbbqsutyi.supabase.co`
-- **Database**: `postgres`
-- **Port**: `5432`
-- **User**: `postgres`
-- **Password**: `RKMRiqaaOlturedteNsSzXJLWcGEKRLk`
+### 🛠️ FIXING THE "ENETUNREACH" ERROR
+If you got a red error in n8n, it's because n8n Cloud is trying to use a new type of internet address (IPv6) that doesn't always work. **We can fix this by using the Supabase "Pooler" instead.**
+
+### STEP 1: Get the "Pooler" Details (IPv4)
+1. Go to **Supabase** -> **Settings (Gear Icon)** -> **Database**.
+2. Scroll to the **Connection Pooler** section.
+3. Make sure the toggle is **ON**.
+4. Change the "Mode" to **Transaction**.
+5. Copy these NEW details:
+   - **Host**: It should look like `aws-0-...pooler.supabase.com`
+   - **Database**: `postgres`
+   - **Port**: **6543** (IMPORTANT: This changes from 5432!)
+   - **User**: `postgres.ocqtqkmzasjpbbqsutyi` (Use the full user string shown there!)
+   - **Password**: `RKMRiqaaOlturedteNsSzXJLWcGEKRLk`
+
+### STEP 2: Update n8n Credentials
+1. Go back to n8n and open your PostgreSQL credential.
+2. Replace the **Host**, **Port**, and **User** with the new ones from Step 1.
+3. Make sure **SSL** is turned **ON**.
+4. Click **Save** and it should turn Green! ✅
 
 ### STEP 2: Connect n8n to your Database
 1. Open your [n8n Cloud](https://n8n.io/cloud) account.
