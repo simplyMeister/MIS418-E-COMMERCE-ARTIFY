@@ -36,13 +36,17 @@ If you don't see a section named "Connection Pooler," it might be because Supaba
    - **Pick "Transaction"**. This is the one we want!
 
 ### STEP 1: Your Working "Pooler" Details
-Use these exact values in n8n to fix the connection error:
+Use these exact values in n8n. **IMPORTANT: Do NOT include brackets `[ ]` in your password!**
+
    - **Host**: `aws-1-eu-west-1.pooler.supabase.com`
    - **Database**: `postgres`
    - **Port**: **6543**
-   - **User**: `postgres.ocqtqkmzasjpbbqsutyi`
-   - **Password**: `RKMRiqaaOlturedteNsSzXJLWcGEKRLk`
+   - **User**: `postgres.ocqtqkmzasjpbbqsutyi` (Make sure you include the part after the dot!)
+   - **Password**: `RKMRiqaaOlturedteNsSzXJLWcGEKRLk` (Just the letters, NO brackets)
    - **SSL**: **ON** (or "Require")
+
+> [!IMPORTANT]
+> If it still fails, you might have a different password than the one above. You can reset it in **Supabase** -> **Settings** -> **Database** -> **Reset Database Password**.
 
 ### STEP 2: Update n8n
 1. Open your PostgreSQL credential in n8n.
