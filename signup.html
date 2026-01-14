@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Artisan Marketplace</title>
+    <meta name="description"
+        content="Create your Artisan Marketplace account to discover unique handcrafted products from local artisans.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body class="auth-page">
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- Logo/Icon -->
+            <div class="auth-icon">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="20" fill="#F4E4C1" />
+                    <path d="M20 10L12 16V24L20 30L28 24V16L20 10Z" stroke="#5D1818" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20 18V30" stroke="#5D1818" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M12 16L20 22L28 16" stroke="#5D1818" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+
+            <!-- Welcome Text -->
+            <h1 class="auth-title">Create Account</h1>
+            <p class="auth-subtitle">Join our artisan community</p>
+
+            <!-- Social Login Buttons -->
+            <div class="social-login">
+                <button class="social-btn google-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19.8055 10.2292C19.8055 9.55056 19.7501 8.86667 19.6306 8.19861H10.2V12.0492H15.6014C15.3773 13.2911 14.6571 14.3898 13.6025 15.0875V17.5866H16.825C18.7173 15.8449 19.8055 13.2728 19.8055 10.2292Z"
+                            fill="#4285F4" />
+                        <path
+                            d="M10.2 20C12.9 20 15.1709 19.1045 16.8295 17.5866L13.607 15.0875C12.7027 15.6975 11.5509 16.0433 10.2045 16.0433C7.59364 16.0433 5.38091 14.2833 4.58636 11.9167H1.26364V14.4921C2.96091 17.8683 6.41909 20 10.2 20Z"
+                            fill="#34A853" />
+                        <path
+                            d="M4.58182 11.9167C4.16545 10.6747 4.16545 9.33008 4.58182 8.08811V5.5127H1.26364C-0.154545 8.33775 -0.154545 11.6673 1.26364 14.4923L4.58182 11.9167Z"
+                            fill="#FBBC04" />
+                        <path
+                            d="M10.2 3.95671C11.6245 3.93444 13.0027 4.47231 14.0436 5.45671L16.8909 2.60444C15.0827 0.904437 12.6827 -0.0319077 10.2 0.000314635C6.41909 0.000314635 2.96091 2.13176 1.26364 5.51267L4.58182 8.08808C5.37182 5.71671 7.58909 3.95671 10.2 3.95671Z"
+                            fill="#EA4335" />
+                    </svg>
+                    Continue with Google
+                </button>
+
+                <button class="social-btn facebook-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20 10C20 4.47715 15.5229 0 10 0C4.47715 0 0 4.47715 0 10C0 14.9912 3.65684 19.1283 8.4375 19.8785V12.8906H5.89844V10H8.4375V7.79688C8.4375 5.29063 9.93047 3.90625 12.2146 3.90625C13.3084 3.90625 14.4531 4.10156 14.4531 4.10156V6.5625H13.1922C11.95 6.5625 11.5625 7.3334 11.5625 8.125V10H14.3359L13.8926 12.8906H11.5625V19.8785C16.3432 19.1283 20 14.9912 20 10Z"
+                            fill="#1877F2" />
+                    </svg>
+                    Continue with Facebook
+                </button>
+            </div>
+
+            <!-- Divider -->
+            <div class="divider">
+                <span>Or continue with email</span>
+            </div>
+
+            <!-- Signup Form -->
+            <form class="auth-form" id="signupForm">
+                <div class="form-group">
+                    <label for="fullname" class="form-label">Full Name</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.6667 17.5V15.8333C16.6667 14.9493 16.3155 14.1014 15.6904 13.4763C15.0652 12.8512 14.2174 12.5 13.3333 12.5H6.66667C5.78261 12.5 4.93477 12.8512 4.30964 13.4763C3.68452 14.1014 3.33333 14.9493 3.33333 15.8333V17.5"
+                                stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M10 9.16667C11.8409 9.16667 13.3333 7.67428 13.3333 5.83333C13.3333 3.99238 11.8409 2.5 10 2.5C8.15905 2.5 6.66667 3.99238 6.66667 5.83333C6.66667 7.67428 8.15905 9.16667 10 9.16667Z"
+                                stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <input type="text" id="fullname" class="form-input" placeholder="John Doe" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.33333 3.33334H16.6667C17.5833 3.33334 18.3333 4.08334 18.3333 5.00001V15C18.3333 15.9167 17.5833 16.6667 16.6667 16.6667H3.33333C2.41667 16.6667 1.66667 15.9167 1.66667 15V5.00001C1.66667 4.08334 2.41667 3.33334 3.33333 3.33334Z"
+                                stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M18.3333 5L10 10.8333L1.66667 5" stroke="#999" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <input type="email" id="email" class="form-input" placeholder="you@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.8333 9.16667H4.16667C3.24619 9.16667 2.5 9.91286 2.5 10.8333V16.6667C2.5 17.5871 3.24619 18.3333 4.16667 18.3333H15.8333C16.7538 18.3333 17.5 17.5871 17.5 16.6667V10.8333C17.5 9.91286 16.7538 9.16667 15.8333 9.16667Z"
+                                stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M5.83333 9.16667V5.83333C5.83333 4.72826 6.27232 3.66846 7.05372 2.88706C7.83512 2.10565 8.89493 1.66667 10 1.66667C11.1051 1.66667 12.1649 2.10565 12.9463 2.88706C13.7277 3.66846 14.1667 4.72826 14.1667 5.83333V9.16667"
+                                stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <input type="password" id="password" class="form-input" placeholder="Create a password"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" required>
+                        <span class="checkbox-text">I agree to the <a href="#" class="auth-link">Terms of Service</a>
+                            and <a href="#" class="auth-link">Privacy Policy</a></span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Create Account</button>
+            </form>
+
+            <!-- Sign In Link -->
+            <p class="auth-footer">
+                Already have an account? <a href="login.html" class="auth-link">Sign in</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/signup.js"></script>
+</body>
+
+</html>

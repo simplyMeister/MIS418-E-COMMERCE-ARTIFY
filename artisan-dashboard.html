@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Artisan Hub</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Artisan Hub
+                </a>
+            </div>
+
+            <div class="sidebar-profile">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop"
+                    alt="Profile" class="profile-avatar">
+                <div class="profile-info">
+                    <h4>Sarah Anderson</h4>
+                    <p>Ceramic Artist</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="artisan-dashboard.html" class="nav-item active">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    Overview
+                </a>
+                <a href="artisan-products.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    Products
+                </a>
+                <a href="artisan-orders.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                    </svg>
+                    Orders
+                </a>
+                <a href="artisan-analytics.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                    Analytics
+                </a>
+                <a href="artisan-community.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    Community
+                </a>
+                <a href="artisan-profile.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Profile
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <div class="header-content">
+                    <div class="header-title">
+                        <h1>Welcome back, Sarah!</h1>
+                        <p>Here's what's happening with your shop today.</p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </div>
+                            <div class="stat-change positive">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="18 15 12 9 6 15"></polyline>
+                                </svg>
+                                +12.5%
+                            </div>
+                        </div>
+                        <div class="stat-value">$3,847</div>
+                        <div class="stat-label">Total Revenue</div>
+                        <div class="stat-sublabel">vs last month</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                            </div>
+                            <div class="stat-change positive">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="18 15 12 9 6 15"></polyline>
+                                </svg>
+                                +8.2%
+                            </div>
+                        </div>
+                        <div class="stat-value">24</div>
+                        <div class="stat-label">Orders</div>
+                        <div class="stat-sublabel">vs last month</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                            <div class="stat-change positive">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="18 15 12 9 6 15"></polyline>
+                                </svg>
+                                +3
+                            </div>
+                        </div>
+                        <div class="stat-value">38</div>
+                        <div class="stat-label">Products</div>
+                        <div class="stat-sublabel">new this month</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="stat-change negative">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                                -0.5%
+                            </div>
+                        </div>
+                        <div class="stat-value">3.2%</div>
+                        <div class="stat-label">Conversion Rate</div>
+                        <div class="stat-sublabel">vs last month</div>
+                    </div>
+                </div>
+
+                <!-- Recent Orders & Top Products -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <!-- Recent Orders -->
+                    <div class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Recent Orders</h2>
+                            <a href="artisan-orders.html" class="section-action">View All</a>
+                        </div>
+                        <div class="order-list">
+                            <div class="order-item">
+                                <div class="order-info">
+                                    <h4>#3847 <span class="order-status completed">Completed</span></h4>
+                                    <p>Emma Wilson • Handmade Ceramic Bowl</p>
+                                </div>
+                                <div class="order-price">$89.00</div>
+                            </div>
+                            <div class="order-item">
+                                <div class="order-info">
+                                    <h4>#3846 <span class="order-status processing">Processing</span></h4>
+                                    <p>James Chen • Artisan Coffee Mug Set</p>
+                                </div>
+                                <div class="order-price">$45.00</div>
+                            </div>
+                            <div class="order-item">
+                                <div class="order-info">
+                                    <h4>#3845 <span class="order-status shipped">Shipped</span></h4>
+                                    <p>Sofia Martinez • Decorative Vase</p>
+                                </div>
+                                <div class="order-price">$125.00</div>
+                            </div>
+                            <div class="order-item">
+                                <div class="order-info">
+                                    <h4>#3844 <span class="order-status completed">Completed</span></h4>
+                                    <p>Oliver Brown • Ceramic Planter</p>
+                                </div>
+                                <div class="order-price">$67.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Top Products -->
+                    <div class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Top Products</h2>
+                            <a href="artisan-products.html" class="section-action">View All</a>
+                        </div>
+                        <div class="top-products-list">
+                            <div class="top-product-item">
+                                <span class="top-product-rank">1</span>
+                                <div class="top-product-info">
+                                    <h4>Handmade Ceramic Bowl</h4>
+                                    <p>34 sales</p>
+                                </div>
+                                <div class="top-product-revenue">$3,026</div>
+                            </div>
+                            <div class="top-product-item">
+                                <span class="top-product-rank">2</span>
+                                <div class="top-product-info">
+                                    <h4>Artisan Coffee Mug</h4>
+                                    <p>28 sales</p>
+                                </div>
+                                <div class="top-product-revenue">$560</div>
+                            </div>
+                            <div class="top-product-item">
+                                <span class="top-product-rank">3</span>
+                                <div class="top-product-info">
+                                    <h4>Decorative Vase</h4>
+                                    <p>18 sales</p>
+                                </div>
+                                <div class="top-product-revenue">$2,250</div>
+                            </div>
+                            <div class="top-product-item">
+                                <span class="top-product-rank">4</span>
+                                <div class="top-product-info">
+                                    <h4>Ceramic Planter</h4>
+                                    <p>15 sales</p>
+                                </div>
+                                <div class="top-product-revenue">$1,005</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

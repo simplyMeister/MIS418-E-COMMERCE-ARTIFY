@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Artify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .checkout-grid {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 40px;
+            margin-top: 120px;
+            margin-bottom: 80px;
+        }
+
+        .checkout-section {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+
+        .checkout-section h2 {
+            font-family: var(--font-heading);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        .order-summary {
+            position: sticky;
+            top: 100px;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .summary-total {
+            border-top: 1px solid #ddd;
+            margin-top: 15px;
+            padding-top: 15px;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .place-order-btn {
+            width: 100%;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .place-order-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .product-mini {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .product-mini img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-b">B</span> Artify
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <form id="checkoutForm" class="checkout-grid">
+            <div class="checkout-left">
+                <div class="checkout-section">
+                    <h2>Shipping Information</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">First Name</label>
+                            <input type="text" id="firstName" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" id="lastName" class="form-input" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Address</label>
+                        <input type="text" id="address" class="form-input" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">City</label>
+                            <input type="text" id="city" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" id="phone" class="form-input" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h2>Payment Method</h2>
+                    <div class="form-group">
+                        <label class="form-label">Card Number</label>
+                        <input type="text" class="form-input" placeholder="0000 0000 0000 0000" id="cardNumber">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Expiry Date</label>
+                            <input type="text" class="form-input" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">CVV</label>
+                            <input type="text" class="form-input" placeholder="000">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-right">
+                <div class="checkout-section order-summary">
+                    <h2>Order Summary</h2>
+                    <div id="checkoutItems">
+                        <!-- Loaded dynamically or static for demo -->
+                        <div class="product-mini">
+                            <img src="assets/image/product_img/hasami_porcelain_mug.jpeg" alt="Product">
+                            <div>
+                                <p style="font-weight: 500;">Hasami Porcelain Mug</p>
+                                <p style="font-size: 0.9rem; color: #777;">Quantity: 1</p>
+                            </div>
+                            <p style="margin-left: auto; font-weight: 500;">₦25,000</p>
+                        </div>
+                    </div>
+
+                    <div class="summary-item" style="margin-top: 20px;">
+                        <span>Subtotal</span>
+                        <span id="subtotal">₦25,000</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping</span>
+                        <span>₦2,000</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span id="grandTotal">₦27,000</span>
+                    </div>
+
+                    <button type="submit" class="place-order-btn">Complete Purchase</button>
+                    <p style="text-align: center; margin-top: 15px; font-size: 0.8rem; color: #777;">
+                        Secure SSL Encryption
+                    </p>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2024 Artify. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/n8n-webhooks.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Fill from session if available
+            const userName = sessionStorage.getItem('userName');
+            const userEmail = sessionStorage.getItem('userEmail');
+            if (userName) {
+                const names = userName.split(' ');
+                document.getElementById('firstName').value = names[0] || '';
+                document.getElementById('lastName').value = names.slice(1).join(' ') || '';
+            }
+            if (userEmail) document.getElementById('email').value = userEmail;
+
+            const checkoutForm = document.getElementById('checkoutForm');
+            if (checkoutForm) {
+                checkoutForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+
+                    const orderNumber = 'ORD-' + Math.floor(100000 + Math.random() * 900000);
+                    const email = document.getElementById('email').value;
+                    const name = document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value;
+
+                    if (typeof N8NWebhookHandler !== 'undefined') {
+                        const n8n = new N8NWebhookHandler();
+
+                        // 1. Trigger Payment Confirmation (Simulated)
+                        console.log('Confirming payment...');
+                        await n8n.triggerPaymentConfirmation({
+                            paymentId: Math.floor(Math.random() * 10000),
+                            orderId: 101,
+                            orderNumber: orderNumber,
+                            amount: 27000,
+                            paymentMethod: 'credit_card',
+                            transactionId: 'TXN_' + Date.now(),
+                            customerEmail: email,
+                            customerName: name
+                        });
+
+                        // 2. Trigger Order Placed
+                        console.log('Placing order...');
+                        await n8n.triggerOrderPlaced({
+                            orderId: 101,
+                            orderNumber: orderNumber,
+                            customerEmail: email,
+                            customerName: name,
+                            customerPhone: document.getElementById('phone').value,
+                            artisanEmail: 'artisan@example.com',
+                            artisanName: 'Maria Anders',
+                            shopName: 'Maria Crafts',
+                            items: [{ title: 'Hasami Porcelain Mug', quantity: 1, price: 25000 }],
+                            totalAmount: 27000,
+                            shippingAddress: document.getElementById('address').value + ', ' + document.getElementById('city').value,
+                            paymentMethod: 'credit_card'
+                        });
+
+                        // 3. Trigger Inventory Update (Stock -1)
+                        await n8n.triggerInventoryUpdate({
+                            productId: 'hasami_mug',
+                            title: 'Hasami Porcelain Mug',
+                            previousStock: 10,
+                            newStock: 9,
+                            changeType: 'sale',
+                            artisanEmail: 'artisan@example.com'
+                        });
+
+                        // 4. Check for Low Stock (Trigger alert if needed)
+                        if (9 <= 5) { // Assuming threshold is 5
+                            await n8n.triggerLowStockAlert({
+                                productId: 'hasami_mug',
+                                title: 'Hasami Porcelain Mug',
+                                currentStock: 9,
+                                threshold: 5,
+                                artisanEmail: 'artisan@example.com',
+                                artisanName: 'Maria Anders'
+                            });
+                        }
+
+                        alert('Success! Your order ' + orderNumber + ' has been placed. Check your email for confirmation.');
+                        window.location.href = 'index.html';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

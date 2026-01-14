@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Profile - Artisan Hub</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <style>
+        .profile-content {
+            max-width: 1000px;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .profile-picture-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #e5e5e5;
+            text-align: center;
+        }
+
+        .profile-picture-wrapper {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1.5rem;
+            position: relative;
+        }
+
+        .profile-picture {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .upload-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 0 auto;
+            padding: 0.625rem 1.25rem;
+            background: white;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .upload-btn:hover {
+            border-color: #d0d0d0;
+            background: #fafafa;
+        }
+
+        .stats-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #e5e5e5;
+        }
+
+        .stats-section h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+
+        .stat-row label {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .stat-row span {
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .rating-value {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Artisan Hub
+                </a>
+            </div>
+
+            <div class="sidebar-profile">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop"
+                    alt="Profile" class="profile-avatar">
+                <div class="profile-info">
+                    <h4>Sarah Anderson</h4>
+                    <p>Ceramic Artist</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="artisan-dashboard.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    Overview
+                </a>
+                <a href="artisan-products.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    Products
+                </a>
+                <a href="artisan-orders.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                    </svg>
+                    Orders
+                </a>
+                <a href="artisan-analytics.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                    Analytics
+                </a>
+                <a href="artisan-community.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    Community
+                </a>
+                <a href="artisan-profile.html" class="nav-item active">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Profile
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <div class="header-content">
+                    <div class="header-title">
+                        <h1>Shop Profile</h1>
+                        <p>Manage your shop information and settings</p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="profile-content">
+                    <div class="profile-grid">
+                        <!-- Left Column - Shop Information -->
+                        <div>
+                            <div class="content-section">
+                                <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1.5rem;">Shop
+                                    Information</h3>
+
+                                <div class="form-field" style="margin-bottom: 1.5rem;">
+                                    <label>Shop Name</label>
+                                    <input type="text" value="Sarah's Ceramics" placeholder="Enter shop name">
+                                </div>
+
+                                <div class="form-field" style="margin-bottom: 1.5rem;">
+                                    <label>Tagline</label>
+                                    <input type="text" value="Handcrafted ceramic art for your home"
+                                        placeholder="Enter tagline">
+                                </div>
+
+                                <div class="form-field" style="margin-bottom: 1.5rem;">
+                                    <label>Shop Description</label>
+                                    <textarea
+                                        placeholder="Tell customers about your shop">I'm a ceramic artist based in Portland, Oregon. Each piece is handmade with care and attention to detail. I specialize in functional pottery that brings beauty to everyday life.</textarea>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label>Location</label>
+                                        <input type="text" value="Portland, Oregon" placeholder="City, State">
+                                    </div>
+                                    <div class="form-field">
+                                        <label>Website</label>
+                                        <input type="url" value="www.sarahsceramics.com" placeholder="www.example.com">
+                                    </div>
+                                </div>
+
+                                <button class="btn-primary-dashboard" style="margin-top: 1rem;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z">
+                                        </path>
+                                        <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                                        <polyline points="7 3 7 8 15 8"></polyline>
+                                    </svg>
+                                    Save Changes
+                                </button>
+                            </div>
+
+                            <!-- Social Media -->
+                            <div class="content-section" style="margin-top: 1.5rem;">
+                                <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1.5rem;">Social Media
+                                </h3>
+
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label>Instagram</label>
+                                        <input type="text" value="@sarahsceramics" placeholder="@username">
+                                    </div>
+                                    <div class="form-field">
+                                        <label>Facebook</label>
+                                        <input type="text" value="facebook.com/sarahsceramics"
+                                            placeholder="facebook.com/page">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label>Pinterest</label>
+                                        <input type="text" value="@sarahsceramics" placeholder="@username">
+                                    </div>
+                                    <div class="form-field">
+                                        <label>TikTok</label>
+                                        <input type="text" value="@username" placeholder="@username">
+                                    </div>
+                                </div>
+
+                                <button class="btn-primary-dashboard" style="margin-top: 1rem;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z">
+                                        </path>
+                                        <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                                        <polyline points="7 3 7 8 15 8"></polyline>
+                                    </svg>
+                                    Update Social Links
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Right Column - Profile Picture & Stats -->
+                        <div>
+                            <div class="profile-picture-section">
+                                <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 1.5rem;">Profile Picture
+                                </h3>
+                                <div class="profile-picture-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
+                                        alt="Profile" class="profile-picture">
+                                </div>
+                                <button class="upload-btn">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="17 8 12 3 7 8"></polyline>
+                                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                                    </svg>
+                                    Upload New Photo
+                                </button>
+                            </div>
+
+                            <div class="stats-section" style="margin-top: 1.5rem;">
+                                <h3>Shop Stats</h3>
+                                <div class="stat-row">
+                                    <label>Member Since</label>
+                                    <span>Jan 2024</span>
+                                </div>
+                                <div class="stat-row">
+                                    <label>Total Sales</label>
+                                    <span>$12,450</span>
+                                </div>
+                                <div class="stat-row">
+                                    <label>Avg. Rating</label>
+                                    <span class="rating-value">
+                                        4.8
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37">
+                                            <polygon
+                                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                            </polygon>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="stat-row">
+                                    <label>Shop Views</label>
+                                    <span>2,341</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

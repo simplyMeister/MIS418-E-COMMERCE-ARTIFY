@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Artisan Hub</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Artisan Hub
+                </a>
+            </div>
+
+            <div class="sidebar-profile">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop"
+                    alt="Profile" class="profile-avatar">
+                <div class="profile-info">
+                    <h4>Sarah Anderson</h4>
+                    <p>Ceramic Artist</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="artisan-dashboard.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    Overview
+                </a>
+                <a href="artisan-products.html" class="nav-item active">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    Products
+                </a>
+                <a href="artisan-orders.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                    </svg>
+                    Orders
+                </a>
+                <a href="artisan-analytics.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                    Analytics
+                </a>
+                <a href="artisan-community.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    Community
+                </a>
+                <a href="artisan-profile.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Profile
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <div class="header-content">
+                    <div class="header-title">
+                        <h1>Products</h1>
+                        <p>Manage your product inventory</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn-primary-dashboard">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            Add Product
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <!-- Search Bar -->
+                <div class="search-bar" style="margin-bottom: 2rem;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" placeholder="Search products...">
+                </div>
+
+                <!-- Products Grid -->
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <div class="product-item">
+                        <button class="product-menu">⋮</button>
+                        <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=400&h=400&fit=crop"
+                            alt="Product" class="product-image">
+                        <div class="product-details">
+                            <h3 class="product-name">Handmade Ceramic Bowl</h3>
+                            <p class="product-category">Tableware</p>
+                            <div class="product-footer">
+                                <span class="product-price">$89.00</span>
+                                <span class="product-stock in-stock">12 in stock</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-item">
+                        <button class="product-menu">⋮</button>
+                        <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400&h=400&fit=crop"
+                            alt="Product" class="product-image">
+                        <div class="product-details">
+                            <h3 class="product-name">Artisan Coffee Mug Set</h3>
+                            <p class="product-category">Tableware</p>
+                            <div class="product-footer">
+                                <span class="product-price">$45.00</span>
+                                <span class="product-stock in-stock">24 in stock</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-item">
+                        <button class="product-menu">⋮</button>
+                        <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=400&h=400&fit=crop"
+                            alt="Product" class="product-image">
+                        <div class="product-details">
+                            <h3 class="product-name">Decorative Vase</h3>
+                            <p class="product-category">Home Decor</p>
+                            <div class="product-footer">
+                                <span class="product-price">$125.00</span>
+                                <span class="product-stock in-stock">8 in stock</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-item">
+                        <button class="product-menu">⋮</button>
+                        <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=400&h=400&fit=crop"
+                            alt="Product" class="product-image">
+                        <div class="product-details">
+                            <h3 class="product-name">Ceramic Planter</h3>
+                            <p class="product-category">Garden</p>
+                            <div class="product-footer">
+                                <span class="product-price">$67.00</span>
+                                <span class="product-stock low-stock">3 in stock</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-item">
+                        <button class="product-menu">⋮</button>
+                        <img src="https://images.unsplash.com/photo-1610701596061-2ecf227e85b2?w=400&h=400&fit=crop"
+                            alt="Product" class="product-image">
+                        <div class="product-details">
+                            <h3 class="product-name">Handpainted Plate Set</h3>
+                            <p class="product-category">Tableware</p>
+                            <div class="product-footer">
+                                <span class="product-price">$156.00</span>
+                                <span class="product-stock out-stock">Out of stock</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="product-item">
+                        <button class="product-menu">⋮</button>
+                        <img src="https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=400&h=400&fit=crop"
+                            alt="Product" class="product-image">
+                        <div class="product-details">
+                            <h3 class="product-name">Ceramic Serving Bowl</h3>
+                            <p class="product-category">Tableware</p>
+                            <div class="product-footer">
+                                <span class="product-price">$78.00</span>
+                                <span class="product-stock in-stock">15 in stock</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Add Product Modal (Simple) -->
+    <div id="addProductModal" class="dashboard-modal"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:1000; align-items:center; justify-content:center;">
+        <div class="modal-content"
+            style="background:#fff; padding:30px; border-radius:12px; width:500px; position:relative;">
+            <button onclick="document.getElementById('addProductModal').style.display='none'"
+                style="position:absolute; top:15px; right:15px; background:none; border:none; font-size:1.5rem; cursor:pointer;">&times;</button>
+            <h2 style="margin-bottom:20px;">Add New Product</h2>
+            <form id="addProductForm">
+                <div style="margin-bottom:15px;">
+                    <label style="display:block; margin-bottom:5px;">Product Title</label>
+                    <input type="text" id="pTitle" required
+                        style="width:100%; padding:10px; border:1px solid #ddd; border-radius:6px;">
+                </div>
+                <div style="margin-bottom:15px;">
+                    <label style="display:block; margin-bottom:5px;">Price ($)</label>
+                    <input type="number" id="pPrice" required
+                        style="width:100%; padding:10px; border:1px solid #ddd; border-radius:6px;">
+                </div>
+                <div style="margin-bottom:15px;">
+                    <label style="display:block; margin-bottom:5px;">Description</label>
+                    <textarea id="pDesc" required
+                        style="width:100%; padding:10px; border:1px solid #ddd; border-radius:8px; min-height:80px;"></textarea>
+                </div>
+                <button type="submit" class="btn-primary-dashboard" style="width:100%;">Launch Product</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/n8n-webhooks.js"></script>
+    <script>
+        document.querySelector('.header-actions button').addEventListener('click', () => {
+            document.getElementById('addProductModal').style.display = 'flex';
+        });
+
+        const addProductForm = document.getElementById('addProductForm');
+        if (addProductForm) {
+            addProductForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const title = document.getElementById('pTitle').value;
+                const price = document.getElementById('pPrice').value;
+                const desc = document.getElementById('pDesc').value;
+
+                if (typeof N8NWebhookHandler !== 'undefined') {
+                    const n8n = new N8NWebhookHandler();
+                    await n8n.triggerProductLaunch({
+                        productId: Math.floor(Math.random() * 10000),
+                        title: title,
+                        description: desc,
+                        price: price,
+                        images: ['https://images.unsplash.com/photo-1578749556568-bc2c40e68b61'],
+                        artisanName: 'Sarah Anderson',
+                        shopName: "Sarah's Ceramics",
+                        launchDate: new Date().toISOString()
+                    });
+
+                    alert('Product launched! Marketing automations triggered (Newsletter, Social Media).');
+                    document.getElementById('addProductModal').style.display = 'none';
+                    addProductForm.reset();
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
