@@ -26,17 +26,13 @@ Every night (or whenever you want), n8n can look at all your sales and calculate
 
 Don't worry about code! We're just going to "connect the dots."
 
-### STEP 1: Get your "Keys" from Supabase
-1. Log in to [Supabase](https://supabase.com).
-2. Click the **Settings (gear icon)** at the bottom left.
-3. Click **Database**.
-4. Scroll down til you see **Connection Info**.
-5. You will need these 5 things:
-   - **Host** (Looks like: `db.xtz...supabase.co`)
-   - **Database** (Usually: `postgres`)
-   - **Port** (Usually: `5432`)
-   - **User** (Usually: `postgres`)
-   - **Password** (The one you created when you made the project)
+### STEP 1: Your Supabase Connection Details
+You will need these 5 things to connect n8n to your database:
+- **Host**: `db.ocqtqkmzasjpbbqsutyi.supabase.co`
+- **Database**: `postgres`
+- **Port**: `5432`
+- **User**: `postgres`
+- **Password**: `RKMRiqaaOlturedteNsSzXJLWcGEKRLk`
 
 ### STEP 2: Connect n8n to your Database
 1. Open your [n8n Cloud](https://n8n.io/cloud) account.

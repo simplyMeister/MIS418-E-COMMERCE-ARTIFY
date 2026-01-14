@@ -13,8 +13,11 @@
 
 ### STEP 2: Connecting n8n to Supabase
 1. Sign up for [n8n Cloud](https://n8n.io/cloud).
-2. Get your Database credentials from Supabase:
-   - **Settings** -> **Database** -> **Connection Info**.
+2. Use your Database credentials (saved in N8N-GUIDE-FOR-BEGINNERS.md):
+   - **Host**: `db.ocqtqkmzasjpbbqsutyi.supabase.co`
+   - **Port**: `5432`
+   - **Database**: `postgres`
+   - **User**: `postgres`
 3. In n8n, go to **Credentials** -> **Add Credential** -> **PostgreSQL**.
 4. Fill in the Host, Database, User, and Password from Supabase.
 
