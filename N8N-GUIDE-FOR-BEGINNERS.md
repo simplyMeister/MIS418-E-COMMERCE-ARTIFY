@@ -26,26 +26,29 @@ Every night (or whenever you want), n8n can look at all your sales and calculate
 
 Don't worry about code! We're just going to "connect the dots."
 
-### 🛠️ FIXING THE "ENETUNREACH" ERROR
-If you got a red error in n8n, it's because n8n Cloud is trying to use a new type of internet address (IPv6) that doesn't always work. **We can fix this by using the Supabase "Pooler" instead.**
+### 🛠️ WHERE IS THE CONNECTION POOLER?
+If you don't see a section named "Connection Pooler," it might be because Supabase moved it to a **Tab** at the top of the Database page.
 
-### STEP 1: Get the "Pooler" Details (IPv4)
-1. Go to **Supabase** -> **Settings (Gear Icon)** -> **Database**.
-2. Scroll to the **Connection Pooler** section.
-3. Make sure the toggle is **ON**.
-4. Change the "Mode" to **Transaction**.
-5. Copy these NEW details:
-   - **Host**: It should look like `aws-0-...pooler.supabase.com`
+1. Go to **Settings** -> **Database**.
+2. Look at the top of the page for tabs: **Connection Info** | **Connection String** | **Connection Pooler**.
+3. If you see those tabs, click on **Connection Pooler**. 
+4. If you don't see tabs, look for a dropdown menu inside the **Connection String** box that lets you choose between **"Direct"**, **"Transaction"**, or **"Session"**. 
+   - **Pick "Transaction"**. This is the one we want!
+
+### STEP 1: Your Working "Pooler" Details
+Use these exact values in n8n to fix the connection error:
+   - **Host**: `aws-1-eu-west-1.pooler.supabase.com`
    - **Database**: `postgres`
-   - **Port**: **6543** (IMPORTANT: This changes from 5432!)
-   - **User**: `postgres.ocqtqkmzasjpbbqsutyi` (Use the full user string shown there!)
+   - **Port**: **6543**
+   - **User**: `postgres.ocqtqkmzasjpbbqsutyi`
    - **Password**: `RKMRiqaaOlturedteNsSzXJLWcGEKRLk`
+   - **SSL**: **ON** (or "Require")
 
-### STEP 2: Update n8n Credentials
-1. Go back to n8n and open your PostgreSQL credential.
-2. Replace the **Host**, **Port**, and **User** with the new ones from Step 1.
-3. Make sure **SSL** is turned **ON**.
-4. Click **Save** and it should turn Green! ✅
+### STEP 2: Update n8n
+1. Open your PostgreSQL credential in n8n.
+2. Put in the new **Host**, **Port (6543)**, and **User**.
+3. **SSL**: Set it to **Require** or **ON**.
+4. Test it—it should turn Green! 
 
 ### STEP 2: Connect n8n to your Database
 1. Open your [n8n Cloud](https://n8n.io/cloud) account.
